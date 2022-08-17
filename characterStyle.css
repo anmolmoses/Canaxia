@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ebf5fc;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.container .cardTemplate
+{
+    position: relative;
+    width: 400px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    float: left;
+    background: linear-gradient(45deg, #8A2387, #E94057, #F27121);
+}
+
+.container .cardTemplate img
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.container .cardTemplate:hover
+{
+    transition: 0.5s;
+    height: max-content;
+    width: max-content;
+}
+
+.container .cardTemplate:hover img
+{
+    left: 80%;
+    height: 500px;
+}
+
+.container .cardTemplate .content
+{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.container .cardTemplate:hover .content
+{
+    opacity: 1;
+    visibility: visible;
+    left: 0%;
+}
+
+.container .cardTemplate .content h2
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.container .cardTemplate .content p
+{
+    color: #fff;
+}
+
+@media (max-width: 991px)
+{
+    .container .cardTemplate
+    {
+        position: relative;
+        width: 300px;
+        max-width: 700px;
+        transition: 0.5s;
+        align-items: flex-start;
+    }
+    .container .cardTemplate:hover
+    {
+        height: 800px;
+    }
+    .container .cardTemplate img 
+    {
+        height: 300px;
+    }
+    .container .cardTemplate:hover img 
+    {
+        left: 50%;
+        height: 400px;
+    }
+
+    .container .cardTemplate .content
+    {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width: 420px)
+{
+    .container .cardTemplate .content
+    {
+        padding: 30px;
+    }
+
+    .container .cardTemplate:hover img
+    {
+        height: 300px;
+    }
+}
